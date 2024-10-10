@@ -10,18 +10,19 @@ const searchClient = new SearchClient(searchEndpoint, indexName, new AzureKeyCre
 export async function searchDocuments(query: string): Promise<any[]> {
     const embedding = await generateEmbedding(query);
 
-    const results = await searchClient.search('', {
+    const results = await searchClient.search(query, {
         vectorSearchOptions: {
             queries: [
                 {
                     kind: 'vector',
                     vector: embedding,
                     fields: ['embedding'],
-                    kNearestNeighborsCount: 3,
+                    kNearestNeighborsCount: 50
                 }
             ]
         },
-        select: ['content', 'embedding'],
+        select: ["chunk"],
+        top: 3
     });
 
     const documents = [];

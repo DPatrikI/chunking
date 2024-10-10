@@ -43,7 +43,7 @@ export default function Home() {
       <div className="mt-8">
         {results.map((result, index) => (
           <div key={index} className="border-b border-white py-2">
-            <p>{result.content}</p>
+            <p>{result.chunk}</p>
           </div>
         ))}
       </div>
