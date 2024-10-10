@@ -26,10 +26,6 @@ export default function Upload() {
       alert(`Upload failed: ${data.error}`);
     }
 
-    const index = await fetch('/api/index', {
-      method: 'POST'
-    });
-
     setUploading(false);
   };
 
