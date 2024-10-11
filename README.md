@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🌟 Integrated Data Chunking and Embedding with Azure AI Search
 
-## Getting Started
+Welcome to the Integrated Data Chunking and Embedding project! Enhance your document processing and search capabilities using Azure AI Search and OpenAI embeddings. 🎉
 
-First, run the development server:
+🎈 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+	•	Semantic Data Chunking: 📄 Intelligently split documents while preserving context.
+	•	Embeddings Generation: 🧠 Convert text chunks into 3072 dimensional embeddings using OpenAI’s text-embedding-3-large model.
+	•	Advanced Search and Retrieval: 🔍 Efficiently index and search vectorized data with Azure AI Search.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Skills used
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+	•	Entity Recognition Skill
+	•	Azure OpenAI Embedding Skill
+	•	Text Split Skill
 
-## Learn More
+Prerequisites
 
-To learn more about Next.js, take a look at the following resources:
+	•	Node.js
+	•	npm or yarn
+	•	Azure Services: Azure AI Search, Azure Blob Storage, Azure OpenAI Service
+	•	OpenAI API Access
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Environment Variables
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+You'll need these variables in your .env.local:
 
-## Deploy on Vercel
+	•	OPENAI_API_KEY=your-openai-api-key
+	•	AZURE_OPENAI_KEY=your-azure-openai-api-key
+	•	AZURE_STORAGE_CONNECTION_STRING=your-storage-connection-string
+	•	AZURE_OPENAI_ENDPOINT=your-azure-openai-endpoint
+	•	OPENAI_API_VERSION="2023-05-15"
+ 	•	AZURE_SEARCH_ENDPOINT=your-azure-search-endpoint
+	•	AZURE_SEARCH_INDEX_NAME="document-embedding-index"
+	•	AZURE_SEARCH_API_KEY=your-azure-search-api-key
+	•	AZURE_STORAGE_CONTAINER_NAME="documents"
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Reflections 🤔
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Which aspect of the project was most rewarding or challenging?
+
+	•	Configuring the indexer and the skillsets on Azure.
+
+- What insights or improvements did you discover during implementation?
+
+	•	I got familiar with the debugging tool for the indexer, which helped greatly in identifying bugs.
+
+- If given more time, what additional features would you consider adding?
+
+	•	Image recognition, handwriting recognition, and just overall make the app more robust.
+
+📝 License
+
+This project is licensed under the MIT License.
